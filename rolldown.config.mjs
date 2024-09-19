@@ -7,7 +7,6 @@ export default defineConfig({
     'process.env.NODE_ENV': '"development"',
   },
   moduleTypes: {
-    ".css": 'text',
     ".svg": 'binary'
   },
   plugins: [
@@ -18,11 +17,22 @@ export default defineConfig({
     reactPlugin(), // load `react-refresh-entry.js` and inject react hmr helpers, eg `$RefreshSig$`
     {
         name: 'emit-html',
+        load(id) {
+          if (id.endsWith('main.css')) {
+            this.emitFile({
+              type: 'asset',
+              fileName: 'main.css',
+              source: `<link rel="stylesheet" href="./main.css"><div id="app"></div><script src="./index.js"></script>`,
+            })
+            // rolldown should emit empty module for app format
+            return "console.log('css')"
+          }
+        },
         generateBundle() {
           this.emitFile({
             type: 'asset',
             fileName: 'index.html',
-            source: `<div id="app"></div><script src="./main.js"></script>`,
+            source: `<div id="app"></div><script src="./index.js"></script>`,
           })
         },
       },
