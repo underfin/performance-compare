@@ -1,5 +1,6 @@
 import { defineConfig } from 'rolldown'
 import { reactPlugin, transformPlugin } from 'rolldown/experimental'
+import fs from 'fs'
 
 export default defineConfig({
   input:  "./src/index.tsx",
@@ -22,7 +23,7 @@ export default defineConfig({
             this.emitFile({
               type: 'asset',
               fileName: 'main.css',
-              source: `<link rel="stylesheet" href="./main.css"><div id="app"></div><script src="./index.js"></script>`,
+              source: fs.readFileSync(id),
             })
             // rolldown should emit empty module for app format
             return "console.log('css')"
@@ -32,7 +33,7 @@ export default defineConfig({
           this.emitFile({
             type: 'asset',
             fileName: 'index.html',
-            source: `<div id="app"></div><script src="./index.js"></script>`,
+            source: `<link rel="stylesheet" href="./main.css"><div id="app"></div><script src="./index.js"></script>`,
           })
         },
       },
