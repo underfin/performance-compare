@@ -22,7 +22,7 @@
     "start:turbopack": "next dev --turbo",
     "build:turbopack": "next build",
     "start:rolldown": "mode=development rolldown --config rolldown.config.mjs",
-    "build::rolldown": "mode=production rolldown --config rolldown.config.mjs"
+    "build:rolldown": "mode=production rolldown --config rolldown.config.mjs"
   },
   "dependencies": {
     "clsx": "^1.2.1",

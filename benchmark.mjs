@@ -146,122 +146,122 @@ class BuildTool {
 }
 
 const buildTools = [
-  // new BuildTool(
-  //   "Farm 1.2.2",
-  //   9000,
-  //   "start:farm",
-  //   /Ready\s*in\s*(.+?)(m?s)/,
-  //   "build:farm",
-  //   /completed\s*in\s*(.+?)(m?s)/,
-  //   "@farmfe/cli/bin/farm.mjs"
-  // ),
-  // new BuildTool(
-  //   "Farm 1.2.2 (Hot)",
-  //   9000,
-  //   "start:farm",
-  //   /Ready\s*in\s*(.+?)(m?s)/,
-  //   "build:farm",
-  //   /completed\s*in\s*(.+?)(m?s)/,
-  //   "@farmfe/cli/bin/farm.mjs",
-  //   true
-  // ),
-  // new BuildTool(
-  //   "Rsbuild 0.7.10",
-  //   6532,
-  //   "start:rsbuild",
-  //   /in\s*(.+?)(m?s)/,
-  //   "build:rsbuild",
-  //   /in\s*(.+?)(m?s)/,
-  //   "@rspack/cli/bin/rspack"
-  // ),
-  // new BuildTool(
-  //   "Rsbuild 0.7.10 (Hot)",
-  //   6532,
-  //   "start:rsbuild",
-  //   /in\s*(.+?)(m?s)/,
-  //   "build:rsbuild",
-  //   /in\s*(.+?)(m?s)/,
-  //   "@rsbuild/core/bin/rsbuild.js",
-  //   true
-  // ),
-  // new BuildTool(
-  //   "Vite 6.0.0-alpha (swc)",
-  //   5173,
-  //   "start:vite",
-  //   /ready\s*in\s*(.+?)(m?s)/,
-  //   "build:vite",
-  //   /built\s*in\s*(.+?)(m?s)/,
-  //   "vite/bin/vite.js"
-  // ),
-  // new BuildTool(
-  //   "Vite 6.0.0-alpha (swc)(Hot)",
-  //   5173,
-  //   "start:vite",
-  //   /ready\s*in\s*(.+?)(m?s)/,
-  //   "build:vite",
-  //   /built\s*in\s*(.+?)(m?s)/,
-  //   "vite/bin/vite.js",
-  //   true
-  // ),
-  // new BuildTool(
-  //   "Vite 6.0.0-alpha (babel)",
-  //   5173,
-  //   "start:vite:babel",
-  //   /ready\s*in\s*(.+?)(m?s)/,
-  //   "build:vite",
-  //   /built\s*in\s*(.+?)(m?s)/,
-  //   "vite/bin/vite.js"
-  // ),
-  // new BuildTool(
-  //   "Vite 6.0.0-alpha (babel)(Hot)",
-  //   5173,
-  //   "start:vite:babel",
-  //   /ready\s*in\s*(.+?)(m?s)/,
-  //   "build:vite",
-  //   /built\s*in\s*(.+?)(m?s)/,
-  //   "vite/bin/vite.js",
-  //   true
-  // ),
-  // new BuildTool(
-  //   "Webpack 5.91.0 (swc)",
-  //   8081,
-  //   "start:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "build:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "webpack-cli/bin/cli.js"
-  // ),
-  // new BuildTool(
-  //   "Webpack 5.91.0 (swc)(Hot)",
-  //   8081,
-  //   "start:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "build:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
+  new BuildTool(
+    "Farm 1.2.2",
+    9000,
+    "start:farm",
+    /Ready\s*in\s*(.+?)(m?s)/,
+    "build:farm",
+    /completed\s*in\s*(.+?)(m?s)/,
+    "@farmfe/cli/bin/farm.mjs"
+  ),
+  new BuildTool(
+    "Farm 1.2.2 (Hot)",
+    9000,
+    "start:farm",
+    /Ready\s*in\s*(.+?)(m?s)/,
+    "build:farm",
+    /completed\s*in\s*(.+?)(m?s)/,
+    "@farmfe/cli/bin/farm.mjs",
+    true
+  ),
+  new BuildTool(
+    "Rsbuild 0.7.10",
+    6532,
+    "start:rsbuild",
+    /in\s*(.+?)(m?s)/,
+    "build:rsbuild",
+    /in\s*(.+?)(m?s)/,
+    "@rspack/cli/bin/rspack"
+  ),
+  new BuildTool(
+    "Rsbuild 0.7.10 (Hot)",
+    6532,
+    "start:rsbuild",
+    /in\s*(.+?)(m?s)/,
+    "build:rsbuild",
+    /in\s*(.+?)(m?s)/,
+    "@rsbuild/core/bin/rsbuild.js",
+    true
+  ),
+  new BuildTool(
+    "Vite 6.0.0-alpha (swc)",
+    5173,
+    "start:vite",
+    /ready\s*in\s*(.+?)(m?s)/,
+    "build:vite",
+    /built\s*in\s*(.+?)(m?s)/,
+    "vite/bin/vite.js"
+  ),
+  new BuildTool(
+    "Vite 6.0.0-alpha (swc)(Hot)",
+    5173,
+    "start:vite",
+    /ready\s*in\s*(.+?)(m?s)/,
+    "build:vite",
+    /built\s*in\s*(.+?)(m?s)/,
+    "vite/bin/vite.js",
+    true
+  ),
+  new BuildTool(
+    "Vite 6.0.0-alpha (babel)",
+    5173,
+    "start:vite:babel",
+    /ready\s*in\s*(.+?)(m?s)/,
+    "build:vite",
+    /built\s*in\s*(.+?)(m?s)/,
+    "vite/bin/vite.js"
+  ),
+  new BuildTool(
+    "Vite 6.0.0-alpha (babel)(Hot)",
+    5173,
+    "start:vite:babel",
+    /ready\s*in\s*(.+?)(m?s)/,
+    "build:vite",
+    /built\s*in\s*(.+?)(m?s)/,
+    "vite/bin/vite.js",
+    true
+  ),
+  new BuildTool(
+    "Webpack 5.91.0 (swc)",
+    8081,
+    "start:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "build:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "webpack-cli/bin/cli.js"
+  ),
+  new BuildTool(
+    "Webpack 5.91.0 (swc)(Hot)",
+    8081,
+    "start:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "build:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
 
-  //   "webpack-cli/bin/cli.js",
-  //   true
-  // ),
-  // new BuildTool(
-  //   "Webpack 5.91.0 (babel)",
-  //   8081,
-  //   "start:webpack:babel",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "build:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "webpack-cli/bin/cli.js"
-  // ),
-  // new BuildTool(
-  //   "Webpack 5.91.0 (babel)(Hot)",
-  //   8081,
-  //   "start:webpack:babel",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
-  //   "build:webpack",
-  //   /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "webpack-cli/bin/cli.js",
+    true
+  ),
+  new BuildTool(
+    "Webpack 5.91.0 (babel)",
+    8081,
+    "start:webpack:babel",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "build:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "webpack-cli/bin/cli.js"
+  ),
+  new BuildTool(
+    "Webpack 5.91.0 (babel)(Hot)",
+    8081,
+    "start:webpack:babel",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
+    "build:webpack",
+    /compiled\s+.+\sin\s*(.+?)(m?s)/,
 
-  //   "webpack-cli/bin/cli.js",
-  //   true
-  // ),
+    "webpack-cli/bin/cli.js",
+    true
+  ),
   new BuildTool(
     "rolldown(Hot)",
     8080,
