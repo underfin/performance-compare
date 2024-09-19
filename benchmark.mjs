@@ -266,9 +266,9 @@ const buildTools = [
     "rolldown(Hot)",
     8080,
     "start:rolldown",
-    /Finished\s+.+\sin\s*(.+?)(m?s)/,
+    /Finished\s+in\s*(.+?)(m?s)/,
     "build:rolldown",
-    /Finished\s+.+\sin\s*(.+?)(m?s)/,
+    /Finished\s+in\s*(.+?)(m?s)/,
     "rolldown/bin/cli.js",
   ),
 ];
