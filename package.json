@@ -20,7 +20,9 @@
     "start:rspack": "rspack serve",
     "build:rspack": "rspack build",
     "start:turbopack": "next dev --turbo",
-    "build:turbopack": "next build"
+    "build:turbopack": "next build",
+    "start:rolldown": "mode=development rolldown --config rolldown.config.mjs",
+    "build::rolldown": "mode=production rolldown --config rolldown.config.mjs"
   },
   "dependencies": {
     "clsx": "^1.2.1",
@@ -64,7 +66,8 @@
     "vite": "6.0.0-alpha.11",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "rolldown": "/Users/likui/Github/rolldown/packages/rolldown"
   },
   "packageManager": "pnpm@8.15.7+sha512.c85cd21b6da10332156b1ca2aa79c0a61ee7ad2eb0453b88ab299289e9e8ca93e6091232b25c07cbf61f6df77128d9c849e5c9ac6e44854dbd211c49f3a67adc"
 }
