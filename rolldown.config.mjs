@@ -12,9 +12,9 @@ export default defineConfig({
   },
   plugins: [
     // // transform jsx to js
-    // transformPlugin({
-    //   reactRefresh: true, // enable react-refresh
-    // }),
+    transformPlugin({
+      reactRefresh: true, // enable react-refresh
+    }),
     reactPlugin(), // load `react-refresh-entry.js` and inject react hmr helpers, eg `$RefreshSig$`
     {
         name: 'emit-html',
