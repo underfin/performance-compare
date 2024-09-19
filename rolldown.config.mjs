@@ -11,10 +11,10 @@ export default defineConfig({
     ".svg": 'binary'
   },
   plugins: [
-    // transform jsx to js
-    transformPlugin({
-      reactRefresh: true, // enable react-refresh
-    }),
+    // // transform jsx to js
+    // transformPlugin({
+    //   reactRefresh: true, // enable react-refresh
+    // }),
     reactPlugin(), // load `react-refresh-entry.js` and inject react hmr helpers, eg `$RefreshSig$`
     {
         name: 'emit-html',
@@ -33,7 +33,20 @@ export default defineConfig({
           this.emitFile({
             type: 'asset',
             fileName: 'index.html',
-            source: `<link rel="stylesheet" href="./main.css"><div id="app"></div><script src="./index.js"></script>`,
+            source: `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>`,
           })
         },
       },
