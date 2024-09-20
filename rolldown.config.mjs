@@ -53,6 +53,7 @@ export default defineConfig({
   ],
   output: {
     format: 'app',
+    // sourcemap: process.env.NODE_ENV === "development" ? true : false,
   },
   dev: process.env.mode === "development" ? true : false,
 })

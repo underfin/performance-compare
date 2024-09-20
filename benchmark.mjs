@@ -263,6 +263,15 @@ const buildTools = [
     true
   ),
   new BuildTool(
+    "rolldown",
+    8080,
+    "start:rolldown",
+    /Finished\s+in\s*(.+?)(m?s)/,
+    "build:rolldown",
+    /Finished\s+in\s*(.+?)(m?s)/,
+    "rolldown/bin/cli.js",
+  ),
+  new BuildTool(
     "rolldown(Hot)",
     8080,
     "start:rolldown",
